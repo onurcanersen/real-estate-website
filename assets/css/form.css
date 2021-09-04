@@ -1,0 +1,25 @@
+.form [class*="col-"] {
+  padding: 10px;
+}
+
+.form .row .col-3 input,
+.form .row .col-3 select {
+  width: 100%;
+}
+
+.form .map-container,
+.form .description-container {
+  height: 500px;
+}
+
+#form-map {
+  height: 461px;
+  z-index: 0;
+}
+
+.form .description-container textarea {
+  min-height: 461px;
+  max-height: 461px;
+  min-width: 100%;
+  max-width: 100%;
+}

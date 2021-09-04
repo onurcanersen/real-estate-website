@@ -1,0 +1,446 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.banner {
+  z-index: 0;
+}
+
+.banner video {
+  height: 600px;
+  width: 100%;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.banner h1 {
+  position: absolute;
+  top: 170px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  color: white;
+}
+
+.banner form {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.banner form input {
+  padding: 10px 20px;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: white 0px 8px 24px;
+}
+
+.banner form button {
+  background: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0;
+  height: 36px;
+  width: 36px;
+  background-color: white;
+  transition-duration: 0.7s;
+  box-shadow: white 0px 8px 24px;
+}
+
+.banner form button:hover {
+  background-color: lightgreen;
+}
+
+.banner form button i {
+  cursor: pointer;
+}
+
+.cards {
+  position: relative;
+}
+
+.cards .col-4 .card {
+  padding: 20px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition-duration: 0.4s;
+}
+
+.cards .col-4 .card:hover {
+  transform: scale(1.1);
+}
+
+.cards .col-4 .card img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.info {
+  position: relative;
+  top: -120px;
+  margin-top: 20px;
+  background-color: royalblue;
+  color: white;
+}
+
+.info .col-7 {
+  padding: 30px;
+}
+
+.info .col-5 {
+  position: relative;
+  left: -150px;
+}
+
+.info .col-7 img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.realtors {
+  position: relative;
+  top: -100px;
+  text-align: center;
+}
+
+.realtors .col-3 {
+  padding: 30px;
+  transition-duration: 0.7s;
+}
+
+.realtors .col-3:hover {
+  transform: translateY(-30px);
+}
+
+.realtors .col-3 img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.filter {
+  position: fixed;
+  top: 70px;
+  padding: 9px 20px 9px 20px;
+  height: 40px;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
+#more-container {
+  display: none;
+  padding: 5px;
+  width: 200px;
+  background-color: white;
+}
+
+#more-container input,
+#more-container select {
+  margin: 5px;
+  width: 70px;
+}
+
+.ads {
+  height: 100vh;
+  width: 100%;
+}
+
+.ads .map {
+  padding: 110px 0 0 0;
+  height: 100vh;
+  z-index: 0;
+}
+
+#ads-map {
+  height: 100%;
+  z-index: 0;
+}
+
+.ads .list {
+  padding: 110px 20px 0 20px;
+  height: 100vh;
+  z-index: 0;
+  overflow-y: scroll;
+}
+
+.ads .list .row .ad-container {
+  padding: 10px;
+  height: 340px;
+  transition-duration: 0.4s;
+}
+
+.ads .list .row .ad-container:hover {
+  transform: scale(1.1);
+}
+
+.ads .list .row .ad-container .ad {
+  position: relative;
+  margin: 10px;
+  padding: 0;
+  height: 300px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 7px;
+}
+
+.ads .list .row .ad-container .ad a {
+  text-decoration: none;
+  color: black;
+}
+
+.ads .list .row .ad-container .ad a img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.ads .list .row .ad-container .ad a h4,
+.ads .list .row .ad-container .ad a h5 {
+  position: relative;
+  top: -70px;
+  margin: 5px 20px;
+  color: white;
+  text-shadow: 4px 4px 4px black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ads .list .row .ad-container .ad a h6 {
+  position: relative;
+  top: -30px;
+  margin: 5px 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ads .list .row .ad-container .ad a p {
+  position: relative;
+  top: -30px;
+  margin: 5px 20px;
+  color: black;
+  font-size: 14px;
+}
+
+.ads .list .row .ad-container .ad .update-icon {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  height: 24px;
+  width: 24px;
+}
+
+.ads .list .row .ad-container .ad .delete-icon {
+  position: absolute;
+  left: 39px;
+  bottom: 10px;
+  height: 24px;
+  width: 24px;
+}
+
+.ad {
+  padding: 70px 120px;
+}
+
+.ad [class*="col-"] {
+  padding: 10px;
+}
+
+#main-image {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.ad .col-5 .image {
+  display: inline-block;
+  width: 70px;
+}
+
+#ad-map {
+  height: 300px;
+  width: 100%;
+}
+
+.ad .col-7 h1,
+.ad .col-7 h2,
+.ad .col-7 h6,
+.ad .col-7 p {
+  margin: 15px 10px;
+}
+
+.create {
+  padding: 70px 120px;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 50px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Extra small and small devices */
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .banner h1 {
+    font-size: 32px;
+  }
+  .banner form {
+    top: 250px;
+  }
+  .cards {
+    padding: 50px;
+    top: -170px;
+  }
+  .cards .col-4 {
+    padding: 30px;
+  }
+  .info {
+    padding: 50px;
+  }
+  .info .col-7 {
+    padding: 10px;
+  }
+  .info .col-5 {
+    position: static;
+  }
+  .realtors {
+    padding: 100px;
+  }
+  .ads .map {
+    height: 50vh;
+  }
+  .ads .list {
+    padding: 30px 50px;
+    height: 50vh;
+  }
+  .create {
+    padding: 70px 50px;
+  }
+  .ad {
+    padding: 70px 30px;
+  }
+}
+
+/* Medium devices */
+@media only screen and (min-width: 768px) {
+  .banner h1 {
+    font-size: 48px;
+  }
+  .banner form {
+    top: 270px;
+  }
+  .cards {
+    padding: 50px;
+    top: -170px;
+  }
+  .cards .col-4 {
+    padding: 20px;
+  }
+  .realtors {
+    padding: 30px;
+  }
+  .ads .list .row .ad-container .ad a h6 {
+    top: -40px;
+    margin: 3px 20px;
+  }
+  .ads .list .row .ad-container .ad a p {
+    top: -40px;
+    margin: 3px 20px;
+    font-size: 13px;
+  }
+}
+
+/* Large and extra large devices */
+@media only screen and (min-width: 992px) {
+  .banner h1 {
+    font-size: 64px;
+  }
+  .banner form {
+    top: 300px;
+  }
+  .cards {
+    padding: 30px 120px;
+    top: -120px;
+  }
+  .cards .col-4 {
+    padding: 30px;
+  }
+  .realtors {
+    padding: 30px 120px;
+  }
+}
