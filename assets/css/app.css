@@ -288,7 +288,7 @@ body {
   margin: 15px 10px;
 }
 
-.create {
+.create, .update {
   padding: 70px 120px;
 }
 
