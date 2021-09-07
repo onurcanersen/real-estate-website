@@ -3,7 +3,7 @@
 include "../helpers/conn.php";
 $id = $_GET["id"];
 $images = $_GET["images"];
-$sql = "DELETE FROM listings WHERE id = $id";
+$sql = "DELETE FROM ads WHERE id = $id";
 $success;
 if (mysqli_query($conn, $sql)) $success = true;
 else $success = false;
